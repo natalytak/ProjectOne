@@ -1,0 +1,61 @@
+img {
+    width: 650px;
+    text-align: center;
+}
+
+.skyline-col{
+    text-align:center;
+    margin-top: 135px;
+}
+
+.input-group{
+    width: 650px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+.btn-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.search-page-button {
+    margin: 0 10px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.page-footer {
+    font-size:8pt;
+}
+
+.about-us{
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    background-color: rgb(139,221,255);
+    border: 2px solid rgb(38,69,110);
+}
+
+.footer-copyright{
+    background-color: rgb(38,69,110);
+    color: rgb(139,221,255);
+}
+
+
+
+#github {
+    width: 18px;
+    margin-left: 25px;
+}
+
+#github:hover {
+    transform: scale(1.5);
+}
+
+
