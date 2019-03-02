@@ -59,3 +59,18 @@ footer {
 }
 
 
+#currentWeather {
+    color: #e6f7ff;
+  } 
+
+.topNavMenu {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.mainContainer {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    background: lightblue;
+}
