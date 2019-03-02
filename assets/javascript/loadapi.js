@@ -21,5 +21,7 @@ $.ajax({
   var roundedTemp = Math.round(results.main.temp);
   var currentTemp = $("<div>").text(roundedTemp + " Degrees F");
 
+
+  $("#currentCityID").prepend("Your're looking at " + cityInput);
   $("#currentWeather").prepend(currentTemp);
 });
