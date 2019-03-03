@@ -1,80 +1,81 @@
 img {
-    width: 650px;
-    text-align: center;
+  width: 650px;
+  text-align: center;
 }
 
-.skyline-col{
-    text-align:center;
-    margin-top: 135px;
+.skyline-col {
+  text-align: center;
+  margin-top: 135px;
 }
 
-.input-group{
-    width: 650px;
-    margin: 20px auto 0 auto;
-    text-align: center;
+.input-group {
+  width: 650px;
+  margin: 20px auto 0 auto;
+  text-align: center;
 }
 
 .btn-container {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .search-page-button {
-    margin: 30px 10px;
+  margin: 30px 10px;
 }
 
-
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .page-footer {
-    font-size:8pt;
+  font-size: 8pt;
 }
 
-.about-us{
-    display: block;
-    text-align: center;
-    padding: 5px 0px;
-    background-color: rgb(139,221,255);
-    border: 2px solid rgb(38,69,110);
+.about-us {
+  display: block;
+  text-align: center;
+  padding: 5px 0px;
+  background-color: rgb(139, 221, 255);
+  border: 2px solid rgb(38, 69, 110);
 }
 
-.footer-copyright{
-    background-color: rgb(38,69,110);
-    color: rgb(139,221,255);
+.footer-copyright {
+  background-color: rgb(38, 69, 110);
+  color: rgb(139, 221, 255);
 }
-
-
 
 #github {
-    width: 18px;
-    margin-left: 25px;
+  width: 18px;
+  margin-left: 25px;
 }
 
 #github:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
-
 #currentWeather {
-    color: #e6f7ff;
-  } 
+  color: darkgray;
+}
 
 #currentCityID {
-    color: #e6f7ff;
-  } 
+  color: darkgray;
+}
 
 .topNavMenu {
-    width: 960px;
-    margin: 0 auto;
+  width: 960px;
+  margin: 0 auto;
 }
 
 .mainContainer {
-    width: 960px;
-    margin: 0 auto;
-    padding: 10px;
-    background: lightblue;
+  width: 100%;
+}
+
+.mainContentContainer {
+  width: 960px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  /* background: lightblue; */
 }
