@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+
+</head>
+<body background="http://wanderers.mikado-themes.com/wp-content/uploads/2018/02/h1-background-1.png">
+
+    <!-- Temporary Article Search -->
+
+
+    
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+    
+
+        <!-- Row for Searching New York Times -->
+        <div class="row">
+          <div class="col-sm-10">
+            <br>
+            <!-- First card is for handling the search parameters -->
+            <div class="card">
+              <div class="card-header">
+                <strong>
+                  <i class="fa fa-list-alt"></i> Search Parameters</strong>
+              </div>
+              <div class="card-body">
+    
+                <!-- Here we create an HTML Form for handling the inputs-->
+                <form role="form">
+    
+                  <!-- Here we create the text box for capturing the search term-->
+                  <div class="form-group">
+                    <label for="search">Search Term:</label>
+                    <input type="text" class="form-control" id="search-term">
+                  </div>
+    
+    
+                  <!-- Here we have our final submit button -->
+                  <button type="submit" class="btn btn-default" id="run-search">
+                    <i class="fa fa-search"></i> Search</button>
+                  <button class="btn btn-default" id="clear-all">
+                    <i class="fa fa-trash"></i> Clear Results</button>
+    
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    <div id="user-button"></div>
+
+  </div>
+        
+        
+
+              
+
+        <br>
+
+         <!-- Articles will load in a table of 3 -->
+
+
+    <div class="row">
+
+        <!-- Bootstrap Grid Divided 9 : 3 -->
+        <div class="col-2"></div>
+
+        <div class="col-7">
+            <div class="card-header">
+                    <h2 class="cityname"><strong>
+                      <i class="fa fa-newspaper-o"></i>  Top Articles on...</strong></h2>
+                      <br>
+
+                      <!-- <div class="cityid"></div> -->
+
+
+                      
+        <div class="row" >
+                
+                <div class="col-sm-4" id="article-section4">
+                </div>
+        </div>
+                  
+        <br>
+
+            <div class="row" id="article-section1">
+                
+                    <div class="col-sm-4">
+                            <img src="images/1.jpg" alt="skyline-photo" style="width:300px;">
+                    </div>
+                    <div class="col-sm-4">
+                            <img src="images/2.jpg" alt="skyline-photo"style="width:300px;">
+                    </div>
+                    <div class="col-sm-4">
+                            <img src="images/3.jpg" alt="skyline-photo"style="width:300px;">
+                    </div>
+                
+            </div>
+            <br>
+
+            <div class="row" id="article-section2">
+                
+                    <div class="col-sm-4">
+                            <img src="images/4.jpg" alt="skyline-photo" style="width:300px;">
+                    </div>
+                    <div class="col-sm-4">
+                            <img src="images/5.jpg" alt="skyline-photo"style="width:300px;">
+                    </div>
+                    <div class="col-sm-4">
+                            <img src="images/6.jpg" alt="skyline-photo"style="width:300px;">
+                    </div>
+                
+            </div>
+            
+
+
+        
+            <!-- Load More Button -->
+            <br><br>
+            <button read-more="" type="button" class="btn btn-warning" id="load-more"><i class="fa fa-newspaper-o"></i>  Load More</button>
+    </div>
+
+        <div class="col-3"></div>
+    </div>
+
+
+<br><br>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+    
+
+/**
+ * pulls information from the form and build the query URL
+ * @returns {string} URL for NYT API based on form inputs
+ */
+ function buildQueryURL() {
+  // queryURL is the url we'll use to query the API
+  var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?";
+
+  // Begin building an object to contain our API call's query parameters
+  // Set the API key
+  var queryParams = { "api-key": "gEHdwjN6FzvV3qyy6BpAlyGyU4m9NGGP" };
+
+
+  // Grab text the user typed into the search input, add to the queryParams object
+  queryParams.q = $("#search-term")
+    .val()
+    .trim();
+
+
+  queryParams.fq =  ("news_desk:travel");
+
+  //console.log(queryParams.q);
+
+  //$("#cityid").append("<p>" + queryParams.q + "</p>");
+
+  // Logging the URL so we have access to it for troubleshooting
+  
+  return queryURL + $.param(queryParams);
+
+
+
+   
+}
+
+
+
+
+
+/**
+ * takes API data (JSON/object) and turns it into elements on the page
+ * @param {object} NYTData - object containing NYT API data
+ */
+function updatePage(NYTData) {
+  // Get from the form the number of results to display
+  // API doesn't have a "limit" parameter, so we have to do this ourselves
+  var numArticles = 6;
+
+  console.log(numArticles);
+
+  // Log the NYTData to console, where it will show up as an object
+  console.log(NYTData);
+  console.log("------------------------------------");
+
+  // Loop through and build elements for the defined number of articles
+  for (var i = 0; i < numArticles; i++) {
+    // Get specific article info for current index
+    var article = NYTData.response.docs[i];
+
+
+   
+
+
+    // Create the  list group to contain the articles and add the article content for each
+    var $articleList = $("<div>");
+        $articleList.append("<br>");
+
+
+
+
+
+
+    // Add the newly created element to the DOM
+    $("#article-section4").append($articleList);
+
+    // If the article has a headline, log and append to $articleList
+    var headline = article.headline;
+    var $articleListItem = $("<li class='list-group-item articleHeadline'></li>");
+    
+    if (headline && headline.main) {
+      console.log(headline.main);
+      $articleListItem.append(
+        "<span class='label label-primary'>"  +
+          "</span>" +
+          "<h4> " +
+          headline.main +
+          "</h4>"
+      );
+      ;
+    }
+
+
+
+    
+
+
+    var multimedia = ("http://nyt.com/" + article.multimedia[i].url);
+    console.log(multimedia);
+
+    var image = $("<img>");
+        image.attr('width', 230);
+        image.attr("src", multimedia);
+        //image.attr("'<ime class='img-responsive img-thumbnail'>");
+        
+
+      // Appending the paragraph and image tag to the animalDiv
+      if (multimedia) {
+      $articleListItem.append(image);
+      }
+            
+
+
+
+
+
+
+
+    // If the article has a byline, log and append to $articleList
+    var byline = article.byline;
+
+    if (byline && byline.original) {
+      console.log(byline.original);
+      $articleListItem.append("<h6>" + byline.original + "</h6>");
+    }
+
+
+    // Log published date, and append to document if exists
+    var pubDate = article.pub_date;
+    console.log(article.pub_date);
+    if (pubDate) {
+      $articleListItem.append("<h7>" + article.pub_date + "</h7>");
+    }
+
+
+        // Log published date, and append to document if exists
+        
+        var snippet = article.snippet;
+        console.log(snippet);
+        if (snippet) {
+       $articleListItem.append("<br><p>" + snippet + "<p>");
+    }
+
+
+  
+
+    var articleButton = $("<button>");
+
+
+    articleButton.addClass("btn btn-warning");
+    articleButton.addClass("fa fa-newspaper-o" );   
+    articleButton.text(" "  + "Read Article" );
+    var articleLink = $("<a>");
+    articleLink.attr("href", article.web_url);
+    articleLink.append(articleButton);
+    // articleButton.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
+    console.log(article.web_url);
+    $articleListItem.append(articleLink);
+    // $(articleLink).clone().appendTo("#user-button");
+    $articleList.append($articleListItem);
+
+
+
+    
+  }
+}
+
+// Function to empty out the articles
+function clear() {
+  $("#article-section").empty();
+}
+
+// CLICK HANDLERS
+// ==========================================================
+
+// .on("click") function associated with the Search Button
+$("#run-search").on("click", function(event) {
+  // This line allows us to take advantage of the HTML "submit" property
+  // This way we can hit enter on the keyboard and it registers the search
+  // (in addition to clicks). Prevents the page from reloading on form submit.
+  event.preventDefault();
+
+  // Empty the region associated with the articles
+  clear();
+
+  // Build the query URL for the ajax request to the NYT API
+  var queryURL = buildQueryURL();
+
+  // Make the AJAX request to the API - GETs the JSON data at the queryURL.
+  // The data then gets passed as an argument to the updatePage function
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(updatePage);
+});
+
+//  .on("click") function associated with the clear button
+$("#clear-all").on("click", clear);
+
+    
+    </script>
+    
+</body>
+</html>
+
+
