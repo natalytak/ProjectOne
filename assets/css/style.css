@@ -1,48 +1,298 @@
-img {
-    width: 650px;
+* {
+    transition: transparency 2s;
+}
+
+/* nav bar */
+.navbar-custom {
+    height: 55px;
+    background: #fff;
+    z-index: 99;
+    border-bottom: 3px solid rgb(38,69,110);
+}
+
+.header-logo {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 75px;
+    border: 2px solid rgb(38,69,110);
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+
+}
+
+.nav-items-container{
+    position: absolute;
+    right: 400px;
+}
+
+.nav-item-links {
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+}
+
+#the-team-head-nav, #saved-cities-head-nav {
+    margin-left: 90px;
+}
+
+.nav-item-links:hover{
+    color: #8c734b;
+}
+
+
+#saved-cities-head-nav {
+    border: 1px solid #8c734b;
+    font-size: 12px;
+
+}
+
+
+#saved-cities-head-nav:hover{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color:#8c734b;
+    color: #fff;
+}
+
+
+
+
+
+/* image carousel */
+.carousel-inner{
+    height:800px;
+    border-bottom: 2px solid rgb(38,69,110);
+}
+
+
+
+
+
+
+/* city input and buttons */
+
+.input-style{
+    position: absolute;
+    width: 575px;
+    bottom: 575px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; 
+    right: 0; 
+}
+
+/* .input-group{
+    position: absolute;
+    top: 250px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; 
+    right: 0; 
+}
+
+*/
+
+.dropdown{
+    position: absolute;
+    right: 0px;
+}
+
+.btn-container{
+    position: relative;
+    bottom: 490px;
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 0; 
+    right: 0; 
     text-align: center;
 }
 
-.skyline-col{
-    text-align:center;
-    margin-top: 135px;
+.search-page-button {
+    margin: 0px 10px;
 }
 
-.input-group{
+
+
+
+
+
+
+
+/* .input-group{
+    position: absolute; 
+    top:350px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     width: 650px;
     margin: 20px auto 0 auto;
     text-align: center;
 }
 
+
 .btn-container {
+    position: absolute; 
+    bottom: 415px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative;
     margin-top: 10px;
     text-align: center;
 }
 
 .search-page-button {
     margin: 30px 10px;
+} */
+
+.dropdown-item:hover {
+    cursor: pointer;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 250px;
+    overflow-x: hidden;
 }
 
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.page-footer {
-    font-size:8pt;
-}
-
-.about-us{
-    display: block;
+/* images and descriptions */
+.images-container{
+    margin-top: 155px;
     text-align: center;
-    padding: 5px 0px;
-    background-color: rgb(139,221,255);
+    
+}
+
+.images-col{
+    max-width: 100%;
+    width: 300px;
+    height: 350px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;    
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;   
+}
+
+.images-col img{
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+
+.image-title{
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+    font-size: 22pt;
+}
+
+.image-description{
+    margin-top: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+/* About us */
+.about-us-column{
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 250px;
+}
+
+.about-us-column h4{
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+    font-size: 32pt;
+}
+
+.about-us-logo{
+    width: 200px;
+    position:absolute;
+    top: 50%;
+    margin-top:-100px;
+    left: 50%;
+    right: 50%;
     border: 2px solid rgb(38,69,110);
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+.about-us-logo-column {
+    position: relative;
+
+}
+
+
+
+
+/* The Team */
+.the-team-column{
+    text-align: center;
+    margin-top: 285px;
+    margin-bottom: 200px;
+}
+
+.the-team-column h4{
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+    font-size: 32pt;
+}
+
+.card{
+    display: inline-block;
+    margin: 30px 30px 45px 30px;
+    border: none;
+}
+
+.card-img-top {
+    width: 150px;
+}
+
+
+
+
+
+
+/* footer */
+footer{
+    height: 35px;
+    background-color: rgb(38,69,110);
+    border-top: 4px solid #8c734b;
 }
 
 .footer-copyright{
+    line-height: 35px;
+    font-size:12pt;
     background-color: rgb(38,69,110);
     color: rgb(139,221,255);
 }
@@ -50,8 +300,13 @@ footer {
 
 
 #github {
-    width: 18px;
-    margin-left: 25px;
+    width: 25px;
+    margin-left: 20px;
+    border: 1px solid rgb(80, 105, 141);
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
 }
 
 #github:hover {
@@ -59,3 +314,346 @@ footer {
 }
 
 
+
+#about-us-jump, #the-team-jump{
+    /* height: 10px; */
+    /* border: 2px solid black; */
+    opacity: 0;
+}
+
+#about-us-jump{
+    position: fixed;
+    top: 180px;
+    left: 100px;
+
+}
+
+
+
+
+/* Vlad's CSS / Weather & Overview*/
+
+#currentWeather {
+  color: darkgray;
+}
+
+#currentCityID {
+  color: darkgray;
+}
+
+.topNavMenu {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  width: 100%;
+}
+
+.mainContentContainer {
+  width: 100%;
+  height: 768px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+
+/* fancy transitions */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.body {
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay:1s;
+  animation-delay: 1s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+
+.fade-in.four {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2;
+    animation-delay: 2s;
+  }
+  
+  .fade-in.five {
+    -webkit-animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+  }
+
+
+/* mobile responsive */
+@media screen and (max-width: 1600px) {
+    .header-logo {
+        left: 300px;
+    }
+
+    .nav-items-container{
+        right: 300px;
+    }
+
+    .carousel-inner{
+        height:700px;
+    }
+
+    .input-style{
+        bottom: 510px;
+    }
+
+    .btn-container{
+        bottom: 425px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .header-logo {
+        left: 200px;
+    }
+
+    .nav-items-container{
+        right: 200px;
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .carousel-inner{
+        height:600px;
+    }
+
+    .input-style{
+        bottom: 455px;
+    }
+
+    .btn-container{
+        bottom: 370px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .header-logo {
+        left: 100px;
+    }
+
+    .nav-items-container{
+        right: 100px;
+    }
+
+    .about-us-logo{
+        left:40%;
+        right: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 1150px) {
+    .carousel-inner{
+        height:475px;
+    }
+
+    .input-style{
+        bottom: 350px;
+    }
+
+    .btn-container{
+        bottom: 265px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fade-images{
+        display:block;
+        margin: 0 auto;
+    }
+    
+    #news-responsive{
+        margin-top:35px;
+    }
+
+    .about-us-logo{
+        left: 25px;
+    }
+
+    .the-team-column{
+        margin-top: 250px;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .header-logo {
+        left: 10px;
+    }
+
+    .nav-items-container{
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .carousel-inner{
+        height: 375px;
+    }
+
+    .input-style{
+        bottom: 275px;
+        width: 450px;
+    }
+
+    .btn-container{
+        bottom: 190px;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .about-us-logo{
+        width: 55px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 180px;
+    }
+
+    .vertical-image-spacing{
+        margin-bottom: 35px;
+    }
+
+    .about-us-header{
+        margin-bottom: 95px;
+    }
+
+
+    .header-logo {
+        top: 75px;
+        width: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 710px) {
+    .carousel-inner{
+        height: 300px;
+    }
+
+    .input-style{
+        bottom: 210px;
+    }
+
+    .btn-container{
+        bottom: 95px;
+    }
+
+    .btn-container{
+        bottom: 135px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input-style{
+        width: 375px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .input-style{
+        width: 325px;
+    }
+
+    .btn-container{
+        bottom: 150px;
+    }
+
+    .search-page-button{
+        margin: 0 5px;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .carousel-inner{
+        height: 225px;
+    }
+
+    .input-style{
+        bottom: 175px;
+    }
+
+    .btn-container{
+        bottom: 100px;
+    }
+
+}
+
+
+
+/* .header-logo {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 75px;
+    border: 2px solid rgb(38,69,110);
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+
+}
+
+.nav-items-container{
+    position: absolute;
+    right: 400px;
+}
+
+.nav-item-links {
+    margin-left: 90px;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+} */
