@@ -85,18 +85,6 @@
     right: 0; 
 }
 
-/* .input-group{
-    position: absolute;
-    top: 250px;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0; 
-    right: 0; 
-}
-
-*/
-
 .dropdown{
     position: absolute;
     right: 0px;
@@ -240,8 +228,13 @@
     border: none;
 }
 
+.card h6 {
+    text-decoration: underline;
+}
+
 .card-img-top {
     width: 150px;
+    border: 1px solid rgb(38,69,110);
 }
 
 
@@ -252,6 +245,7 @@
 /* footer */
 footer{
     height: 35px;
+    margin-top: -35px;
     background-color: rgb(38,69,110);
     border-top: 4px solid #8c734b;
 }
@@ -264,7 +258,6 @@ footer{
 }
 
 #github {
-<<<<<<< HEAD
     width: 25px;
     margin-left: 20px;
     border: 1px solid rgb(80, 105, 141);
@@ -288,8 +281,6 @@ footer{
 
 
 #about-us-jump, #the-team-jump{
-    /* height: 10px; */
-    /* border: 2px solid black; */
     opacity: 0;
 }
 
@@ -302,15 +293,29 @@ footer{
 
 
 
-
 /* Vlad's CSS / Weather & Overview*/
-
-#currentWeather {
-  color: darkgray;
+li.nav-item{
+    text-align: center;
 }
 
-#currentCityID {
-  color: darkgray;
+.overview-navbar{
+    background-color: rgb(38,69,110);
+}
+
+.overview-nav-link, #currentWeather, #currentCityID, .navbar-text{
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+}
+
+.overview-nav-link:hover{
+    color: white;
+}
+
+#currentCityID{
+    font-size: 20pt;
+    font-weight: bold;
 }
 
 .topNavMenu {
@@ -329,6 +334,46 @@ footer{
   padding: 10px;
   background-color: lightgray;
 }
+
+.overview-nav-logo:hover {
+    border: 1px solid white;
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+
+
+/* Events CSS */
+
+.news-nav-link{
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    color: #8c734b;
+    text-transform: uppercase;
+}
+
+.news-nav-link:hover{
+   color: white;
+}
+
+.news-nav-bar{
+    background-color: rgb(38,69,110);
+}
+
+.overview-nav-logo:hover {
+    border: 1px solid white;
+    border-radius: 10px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+
+
+
+
 
 
 /* fancy transitions */
@@ -436,8 +481,6 @@ footer{
         bottom: 370px;
     }
 }
-
-
 
 
 
@@ -601,31 +644,3 @@ footer{
     }
 
 }
-
-
-
-/* .header-logo {
-    position: absolute;
-    top: 0;
-    left: 400px;
-    width: 75px;
-    border: 2px solid rgb(38,69,110);
-    border-radius: 10px;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-
-}
-
-.nav-items-container{
-    position: absolute;
-    right: 400px;
-}
-
-.nav-item-links {
-    margin-left: 90px;
-    letter-spacing: 2px;
-    padding: 0.5rem 1rem;
-    color: #8c734b;
-    text-transform: uppercase;
-} */

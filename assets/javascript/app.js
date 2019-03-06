@@ -39,7 +39,7 @@ $(document).ready(function(){
       
       console.log(cityInput);
       
-      localStorage.setItem('city', cityInput);
+      localStorage.setItem("city", cityInput);
       
       location.href = "overview.html";
       });
@@ -47,6 +47,21 @@ $(document).ready(function(){
 
 
 
+
+    var randomCityList = ["Austin", "New York", "Las Vegas", "Philadelphia", "Chicago", "Nashville", "Miami", "Denver", "Anchorage", "Honolulu"];
+
+    $("#randomCityButton").on("click", function() {
+    
+      event.preventDefault();
+      
+      var cityInput = randomCityList[Math.floor(Math.random() * randomCityList.length)];
+      
+      console.log(cityInput);
+      
+      localStorage.setItem("city", cityInput);
+      
+      location.href = "overview.html";
+      });
     
     });
 
