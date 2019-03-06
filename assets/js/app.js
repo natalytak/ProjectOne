@@ -42,7 +42,7 @@ $(document).ready(function(){
       localStorage.setItem('city', cityInput);
       
       location.href = "overview.html";
-      })
+      });
 
 
 

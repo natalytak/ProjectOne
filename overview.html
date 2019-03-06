@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CitySeer Overview</title>
+
+    <!-- adding 3 stylesheets: reset.css, bootstrap, and style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- box structure includes a main container (mainContainer class), a menu (topNavMenu class), and a content container (mainContentContainer) for overview, top events, and pictures content -->
+    <div class="mainContainer">
+      <header>
+        <div class="topNavMenu">
+          <nav
+            class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                src="assets/images/smalllogo.png"
+                alt="back to search"
+                style="width:50px;height:50px;"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="overview.html"
+                    >About this City<span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">Local News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html">Local Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="topcities.html">Top Searched Cities</a>
+                  </li>
+              </ul>
+              <!-- <span id="fireBase">Firebase Placeholder</span> -->
+              <span id="currentCityID"></span>
+              <span class="navbar-text">
+                &nbsp; | &nbsp;
+              </span>
+              <span id="currentWeather"></span>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="mainContentContainer">
+        <div class="container">
+
+          <br>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header">
+                  What you need to know about Chicago...
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <div id="#cityOverview">
+                    this div (#cityOverview) contains the overview
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  Top Events
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <div id="#topEvents">
+                    this div (#topEvents) contains the top events
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  Location Photos
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <div id="#photoCarousel">
+                    this div (#photoCarousel) contains the photos
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/javascript/loadapi.js"></script>
+  </body>
+</html>
