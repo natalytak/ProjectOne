@@ -5,7 +5,7 @@ console.log(cityInput);
 
 // create weather api call query variable which includes the dynamic cityInput 
 var queryURL =
-  "http://api.openweathermap.org/data/2.5/weather?q=" +
+  "https://api.openweathermap.org/data/2.5/weather?q=" +
   cityInput +
   "&units=imperial&APIKEY=d3100d1c4df5ca0bc479a80c96bf0ccf";
 
