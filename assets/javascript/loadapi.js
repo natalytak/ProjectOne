@@ -131,7 +131,7 @@ success: function(data){
 
 ///////Natasha's overview API call/////
 
-   var myurl = "http://api.geonames.org/wikipediaSearchJSON?q=" + cityInput + "&minRows=20&username=natka";
+   var myurl = "https://api.geonames.org/wikipediaSearchJSON?q=" + cityInput + "&minRows=20&username=natka";
    $.ajax({
       url: myurl,
       method: 'GET',
