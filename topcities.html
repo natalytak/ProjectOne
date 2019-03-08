@@ -15,6 +15,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/table.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script> <!--for firebase-->
+
+
   </head>
 
   <body>
@@ -71,15 +76,23 @@
         </div>
       </header>
 
-      <div class="mainContentContainer">
-        <div class="card">
-          <div class="card-header">
-            Top Searched Cities
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Title</h5>
-            <div id="#cityNews">
-              this div (#topCities) contains the firebase data for top searches
+        <div class="container">
+            <div class="card-header">
+              Your favorite cities
+            </div>
+            <div class="container">
+              <h5 class="card-title"></h5>
+              <div class="container tableDiv">
+                <table class="table table-hover" id="tableContainer">
+                  <thead>
+                    <tr>
+                        <th>Your Favorite cities</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+
+              </div>
             </div>
           </div>
         </div>
@@ -107,5 +120,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/javascript/loadapi.js"></script>
+    <script src="assets/javascript/firebaseTable.js"></script>
   </body>
 </html>

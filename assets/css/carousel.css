@@ -1,0 +1,29 @@
+.photos {
+    height: 200px;
+}
+
+.creditContainer {
+    height: 20px;
+}
+
+.allPhotos {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photos {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: darkgray;
+
+}
+cite, 
+a {
+font-style: normal;
+color: lightgray;
+}
