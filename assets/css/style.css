@@ -146,6 +146,85 @@
     object-fit: cover;
 }
 
+.overview-image{
+    opacity: 0;
+}
+
+.overview-image-waypoint{
+    opacity: 1;
+    transition: 2s all;
+}
+
+.attractions-image{
+    opacity: 0;
+}
+
+.attractions-image-waypoint{
+    opacity: 1;
+    transition: 2s all;
+    transition-delay: .5s;
+}
+
+.news-image{
+    opacity: 0;
+}
+
+.news-image-waypoint{
+    opacity: 1;
+    transition: 2s all;
+    transition-delay: 1s;
+}
+
+.about-us-fade{
+    opacity: 0;
+}
+
+.about-us-fade-waypoint{
+    opacity: 1;
+    transition: 2s all;
+}
+
+.the-team-title-style{
+    opacity: 0;
+}
+
+.the-team-title-style-waypoint{
+    opacity: 1;
+    transition: 2s all;
+}
+
+.the-team-style-group-one{
+    opacity: 0;
+}
+
+.the-team-style-group-one-waypoint{
+    opacity: 1;
+    transition: 2s all;
+    transition-delay: 1s;
+}
+
+.the-team-style-group-two{
+    opacity: 0;
+}
+
+.the-team-style-group-two-waypoint{
+    opacity: 1;
+    transition: 2s all;
+    transition-delay: 1.5s;
+}
+
+.the-team-style-group-three{
+    opacity: 0;
+}
+
+.the-team-style-group-three-waypoint{
+    opacity: 1;
+    transition: 2s all;
+    transition-delay: s;
+}
+
+
+
 
 .image-title{
     letter-spacing: 2px;
@@ -201,7 +280,6 @@
 
 .about-us-logo-column {
     position: relative;
-
 }
 
 
@@ -233,7 +311,9 @@
 }
 
 .card-img-top {
+    height: 185px;
     width: 150px;
+    object-fit: cover;
     border: 1px solid rgb(38,69,110);
 }
 
@@ -333,7 +413,6 @@ li.nav-item{
   height: 768px;
   margin: 0 auto;
   padding: 10px;
-  background-color: lightgray;
 }
 
 .overview-nav-logo:hover {
@@ -375,69 +454,6 @@ li.nav-item{
     width: 100%;
     height: auto;
 }
-
-
-
-
-
-
-/* fancy transitions */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
-}
-
-.fade-in.body {
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-  }
-
-.fade-in.one {
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.fade-in.two {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay:1s;
-  animation-delay: 1s;
-}
-
-.fade-in.three {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-
-
-.fade-in.four {
-    -webkit-animation-delay: 2s;
-    -moz-animation-delay: 2;
-    animation-delay: 2s;
-  }
-  
-  .fade-in.five {
-    -webkit-animation-delay: 2.4s;
-    -moz-animation-delay: 2.4s;
-    animation-delay: 2.4s;
-  }
-
 
 /* mobile responsive */
 @media screen and (max-width: 1600px) {
@@ -685,25 +701,10 @@ li.nav-item{
     height: auto;
     font-size: 0.9em;
   }
-  img, #eventImage {
-    float: left;
-    width: 100%;
-  }
-  #eventImage,img:hover {
-    opacity: 0.8;
-  }
-  button, #eventButton {
-    background-color: #8c734b;
+  
+  #details {
     padding: 8px 40px;
     margin: 10px;
-  }
-  
-  #eventButton,button:hover {
-    opacity: 0.6;
-  }
-  
-  #eventButton,button:focus {
-    outline: grey auto 1px; 
   }
   #details a {
     font-weight: bold;

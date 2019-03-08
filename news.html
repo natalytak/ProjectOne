@@ -87,56 +87,288 @@
 
 
           
+          <body background="http://wanderers.mikado-themes.com/wp-content/uploads/2018/02/h1-background-1.png">
           
-          <body background="assets/images/body_background.jpg">
+            <!-- Temporary Article Bootstrap Search -->
+            
+          
+          
+          
+          
+          
+            <br>
+          
+            <!-- Articles will load in a table of 3 -->
+          
+          
+            <div class="row">
+          
+              <!-- Bootstrap Grid Divided 9 : 3 -->
+              <div class="col-2"></div>
+          
+              <div class="col-7">
+                <div class="card-header">
+                  <h2 class="cityname"><strong>
+                      <i class="headline"></i>    New York Times Travel Articles</strong></h2>
+                  
+          
+                  <div class="row" style=padding-left:30px id="display-articles"> 
+        
+                  </div>
+          
 
           
-              <br>
-            
-              <!-- Articles will load in Bootstrap  -->
-  
-              <div class="row">
-            
-                <!-- Bootstrap Grid Divided 2: 7: 3 -->
-                <div class="col-2"></div>
-            
-                <div class="col-7">
-  
-                  <!--Articles will show here-->
-  
-                      <a href ="" id=divLink></a><div class="row" style=padding-left:30px id="display-articles"></a></div>
           
-
-                  <div class="col-3"></div>
+                  <!-- Load More Button 
+                  <div id="divLoadButton"></div>
+                  <button read-more="" type="button" class="btn btn-warning" id="divLoadButton"><i class="fa fa-newspaper-o"></i>
+                    Load More</button>
+                </div>-->
+                  <br><br>
+          
+                <!-- <footer id="divLoadButton"></footer> -->
+                  </div>
+          
+          
+                <div class="col-3"></div>
+              </div>
             </div>
+          
+          
+          
+          
+          
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <script type="text/javascript">
+          
+          
+              function buildQueryURL() {
+                // queryURL is the url we'll use to query the API
+                var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?";
+          
+                // Begin building an object to contain our API call's query parameters
+                // Set the API key
+                var queryParams = { "api-key": "gEHdwjN6FzvV3qyy6BpAlyGyU4m9NGGP" };
+          
+          
+                // Grab text the user typed into the search input, add to the queryParams object
+                queryParams.q = $("#search-term")
+                  .val()
+                  .trim();
+          
+                queryParams.fq = ("news_desk:travel");
+          
+                //console.log(queryParams.q);
+                return queryURL + $.param(queryParams);
+          
+          
+          
+          
+              }
+          
+          
+              function updatePage(NYTData) {
+                // Get from the form the number of results to display
+                // API doesn't have a "limit" parameter, so we have to do this ourselves
+                var numArticles = 20;
+          
+                console.log(numArticles);
+          
+                // Log the NYTData to console, where it will show up as an object
+                console.log(NYTData);
+                console.log("------------------------------------");
+          
+                // Loop through and build elements for the defined number of articles
+                for (var i = 0; i < numArticles; i++) {
+                  // Get specific article info for current index
+                  var article = NYTData.response.docs[i];
+          
+          
+          
+          
+          
+                  // Create the  group to contain the articles and add the article content for each
+                  var $articleList = $("<div>");
+                  $articleList.append("<br>");
+          
+          
+          
+          
+          
+          
+                  // Add the newly created element 
+                  $("#display-articles").append($articleList);
+                  //$("#article-section4").append(articleGrid);
+          
+                  // If the article has a headline, log and append to $articleList
+                  var headline = article.headline;
+          
+                  //("#display-gifs").append(topicDiv);
+                  //var $articleListItem = $("<th scope='col'></th>");
+                    //var $articleListItem = $("<th scope='col'></th>");
+                  var $articleListItem = $("<div style='background-color:white; padding:35px;  width:500px; height:625px; margin: auto;'></div>");
+                
+          
+                  
+          
+          
+          
+          
+          
+          
+                  var multimedia = ("http://nyt.com/" + article.multimedia[i].url);
+                  console.log(multimedia);
+          
+                  var image = $("<img>");
+                    image.attr('height', 300);
+                  //image.attr('maxWidth', 400);
+                  
+                  
 
-            </body>
-            
-            </html>
+                  image.attr("src", multimedia);
+                  //image.attr("'<ime class='img-responsive img-thumbnail'>");
           
           
-          
-          
+                  // Appending the paragraph and image tag to the animalDiv
+                  if (multimedia) {
+                    $articleListItem.append(image);
+                  }
           
 
-            
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/javascript/api-news.js"></script>
-    <script src="assets/javascript/loadapi.js"></script>
-  </body>
+                  if (headline && headline.main) {
+                    console.log(headline.main);
+                    $articleListItem.append(
+                      "<span class='label label-primary'>" +
+                      "</span>" +
+                      "<h4> " +
+                      headline.main +
+                      "</h4>"
+                    );
+                    ;
+                  }
           
- </body>
           
-</html>
+          
+          
+          
+          
+          
+                  // If the article has a byline, log and append to $articleList
+                  var byline = article.byline;
+          
+                  if (byline && byline.original) {
+                    console.log(byline.original);
+                    $articleListItem.append("<h6>" + byline.original + "</h6>");
+                  }
+          
+          
+                  // Log published date, and append to document if exists
+                  var pubDate = article.pub_date;
+                  console.log(pubDate);
+          
+                  //Using momen.js to convert date format
+                  var randomFormat = "YYYY-MM-DD";
+                  var convertedDate = moment(pubDate, randomFormat);
+                  var date = convertedDate.format("MMMM Do, YYYY");
+          
+          
+                  if (pubDate) {
+                    $articleListItem.append("<h6>" + date + "</h6>");
+                  }
+          
+          
+                  // Log published date, and append to document if exists
+          
+                  var snippet = article.snippet;
+                  console.log(snippet);
+                  if (snippet) {
+                    $articleListItem.append("<p>" + snippet + "<p>");
+                  }
+          
+          
+          
+          
+                  var articleButton = $("<button>");
+          
+          
+                  articleButton.addClass("btn btn-warning");
+                  articleButton.addClass("fa fa-newspaper-o");
+                  articleButton.text(" " + "Read Article");
+                  var articleLink = $("<a>");
+                  articleLink.attr("href", article.web_url);
+                  articleLink.append(articleButton);
+                  // articleButton.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
+                  console.log(article.web_url);
+                  $articleListItem.append(articleLink);
+                  // $(articleLink).clone().appendTo("#user-button");
+                  $articleList.append($articleListItem);
+          
+                  //var articleGrid = $('<div>');
+                  //articleGrid.addClass("col-sm-4"[i])
+                  //articleGrid.append($articleList);
+          
+                }
+          
+                  // Function to load more articles
+          
+          
+                var load = document.createElement("button");
+                load.setAttribute('id', "divLoadButton");
+                load.innerHTML = "Load More";
+                $("#divLoadButton").empty();
+                $("#divLoadButton").append(load);
+          
+                $("#divLoadButton").on("click", function () {
+          
+                  numArticles = numArticles + 3;
+                  console.log(numArticles);
+                  //i=i+10;
+                  console.log(i);
+                  //Load
+          
+          
+          
+          })
+          
+          
+          
+              }
+          
+              
+              
+          
+          
+          
+          
+          
+          
+              // Function to empty out the articles
+              function clear() {
+                $("#article-section4").empty();
+              }
+          
+          
+              $("#run-search").on("click", function (event) {
+                event.preventDefault();
+                clear();
+          
+          
+                var queryURL = buildQueryURL();
+                $.ajax({
+                  url: queryURL,
+                  method: "GET"
+                }).then(updatePage);
+              });
+          
+          
+              $("#clear-all").on("click", clear);
+          
+          
+          
+          
+          
+            </script>
+          
+          </body>
+          
+          </html>
