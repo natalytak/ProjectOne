@@ -332,7 +332,6 @@ li.nav-item{
   height: 768px;
   margin: 0 auto;
   padding: 10px;
-  background-color: lightgray;
 }
 
 .overview-nav-logo:hover {
@@ -343,7 +342,8 @@ li.nav-item{
     -moz-border-radius: 500px;
 }
 
-
+.weather-container {
+    margin: 0 auto;
 
 /* Events CSS */
 
