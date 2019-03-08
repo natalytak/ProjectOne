@@ -660,3 +660,54 @@ li.nav-item{
     }
 
 }
+
+/* /////////////////////////
+////Natasha's CSS////////
+//////////////////////// */
+.attractions {
+    border: 1px solid black;
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    display: inline-block;
+    clear: left;
+    overflow: auto;
+    margin: 5px;
+  }
+  #topAttractions {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-size: 0.7em;
+  }
+  .events {
+    border: 1px solid black;
+    background-color: rgb(235, 235, 235);
+    width: 45%;
+    display: inline-block;
+    clear: left;
+    overflow: auto;
+    margin: 5px;
+  }
+  #topEvents {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-size: 0.9em;
+  }
+  
+  #details {
+    padding: 8px 40px;
+    margin: 10px;
+  }
+  #details a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  #name {
+    font-size: 1.3em;
+    color: rgb(41, 80, 131); 
+  }
+  
