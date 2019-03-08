@@ -1,4 +1,4 @@
-// call the 'city' atteibute from LocalStorage and create the cityInput attribute
+// call the 'city' attribute from LocalStorage and create the cityInput attribute
 var cityInput = localStorage.getItem('city');
 
 console.log(cityInput);
@@ -117,7 +117,7 @@ success: function(data){
       var eventsDiv = $('<div class="events">');
       
       eventsDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
-      eventsDiv.append('<img id="#eventImage" src="' + image + '" style="width:100%;height:250px"><br>');
+      eventsDiv.append('<img id="#eventImage" src="' + image + '" style="width:100%;height:250px;float:left; object-fit:contain"><br>');
       eventsDiv.append('<b id="name">' + name + '</b><br>');
       eventsDiv.append(description + '<br>');
       eventsDiv.append('<b>Attending: </b>' + attending + '<br>');
