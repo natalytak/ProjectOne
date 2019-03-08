@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>24 Hour Weather Forecast Chart </title>
+        <!-- adding 3 stylesheets: reset.css, bootstrap, and style.css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+      <body background="assets/images/body_background.jpg">
+        <!-- box structure includes a main container (mainContainer class), a menu (topNavMenu class), and a content container (mainContentContainer) for overview, top events, and pictures content -->
+        <div class="mainContainer">
+          <header>
+            <div class="topNavMenu">
+              <nav
+                class="navbar navbar-expand-lg navbar overview-navbar">
+                <a class="navbar-brand" href="index.html"
+                  ><img 
+                  class="overview-nav-logo"
+                    src="assets/images/smalllogo.png"
+                    alt="back to search"
+                    style="width:50px;height:50px;"
+                /></a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarText"
+                  aria-controls="navbarText"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="overview-nav-link" href="overview.html"
+                        >About<span class="sr-only">(current)</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="overview-nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="overview-nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="overview-nav-link" href="topcities.html">Saved Cities</a>
+                      </li>
+                    </ul>
+                  <span id="currentCityID"></span>
+                  <span id="save-button" class="overview-nav-link">Save</span>
+                  <span id="currentWeather"></span>
+                  <span class="overview-nav-link">
+         <a href="weatherforecast.html">24 HR Forecast</a>
+                  </span>
+                </div>
+              </nav>
+            </div>
+          </header>
+    
+          <div class="mainContentContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                          <div
+                          class="chart-container weather-container"
+                          style="position: relative; height:20vh; width:40vw"
+                        >
+                          <canvas id="weather-chart" width="200" height="200"></canvas>
+                        </div>
+                    </div>
+                  </div>
+   
+
+    </div>
+    </div>
+
+    <!-- loading jQuery, Chart, Moment js libraries and weatherchart.js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="assets/javascript/loadapi.js"></script>
+    <script src="assets/javascript/weatherchart.js"></script>
+  </body>
+</html>
