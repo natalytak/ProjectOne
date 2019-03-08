@@ -43,7 +43,7 @@
                   var headline = article.headline;
                   
                   // Main div container
-                  var $articleListItem = $("<div style='color:white; background-color:rgba(52,58,64); padding:35px;  width:500px; height:650px; margin: auto;'></div>");
+                  var $articleListItem = $("<div style='color:white; background-color:rgba(52,58,64); padding:35px 20px;  width:500px; height:650px; margin: auto; text-align: center;'></div>");
                 
                    // Image
                   var articleimageLink =("href", article.web_url);
@@ -59,7 +59,7 @@
                   console.log(multimedia);
           
                   var image = $("<img>");
-                  image.attr('height', 300);
+                  image.attr('height', 300,);
                   image.attr("src", multimedia);
                   console.log(image);
                     

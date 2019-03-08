@@ -123,7 +123,7 @@ success: function(data){
       eventsDiv.append('<b>Attending: </b>' + attending + '<br>');
       eventsDiv.append('<b>Address: </b>' + address + '<br>');
       eventsDiv.append('<b>Date: </b>' + timeStart + '<br>')
-      eventsDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
+      eventsDiv.append('<button class="btn btn-warning" id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
       
       $("#topEvents").prepend(eventsDiv);
     });

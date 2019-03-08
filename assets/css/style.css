@@ -222,7 +222,7 @@
 .the-team-style-group-three-waypoint{
     opacity: 1;
     transition: 2s all;
-    transition-delay: s;
+    transition-delay: 2s;
 }
 
 
@@ -425,6 +425,11 @@ li.nav-item{
     -moz-border-radius: 500px;
 }
 
+/* overview photo carousel */
+#carouselContainer{
+    margin-top: 80px;
+}
+
 
 
 /* Events CSS */
@@ -456,7 +461,6 @@ li.nav-item{
     width: 100%;
     height: auto;
 }
-
 
 /*saved cities css */
 .cityclicked {

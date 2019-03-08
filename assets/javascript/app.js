@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 
       // feeling spontaneous button
-    var randomCityList = ["Austin", "New York", "Las Vegas", "Philadelphia", "Chicago", "Nashville", "Miami", "Denver", "Anchorage", "Honolulu"];
+    var randomCityList = ["Las Vegas", "Philadelphia", "Chicago", "Nashville", "Miami", "Denver", "Anchorage", "Honolulu", "Los Angeles", "Boston"];
 
     $("#randomCityButton").on("click", function() {
     
