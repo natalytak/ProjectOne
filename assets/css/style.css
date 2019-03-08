@@ -680,25 +680,10 @@ li.nav-item{
     height: auto;
     font-size: 0.9em;
   }
-  img, #eventImage {
-    float: left;
-    width: 100%;
-  }
-  #eventImage,img:hover {
-    opacity: 0.8;
-  }
-  button, #eventButton {
-    background-color: #8c734b;
+  
+  #details {
     padding: 8px 40px;
     margin: 10px;
-  }
-  
-  #eventButton,button:hover {
-    opacity: 0.6;
-  }
-  
-  #eventButton,button:focus {
-    outline: grey auto 1px; 
   }
   #details a {
     font-weight: bold;
