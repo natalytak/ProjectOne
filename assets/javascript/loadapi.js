@@ -22,7 +22,7 @@ $.ajax({
 
   // add temperature to currentWeather div element on UI, rounding temp using Math.round function because temp value come back with two decimal places by default
   var roundedTemp = Math.round(results.main.temp);
-  var currentTemp = $("<div>").text("Weather: " + roundedTemp + " Degrees F");
+  var currentTemp = $("<div>").text("Weather: " + roundedTemp + "\xB0F");
 
   // add temperature and city values to menu UI
   $("#currentCityID").prepend(cityInput);
