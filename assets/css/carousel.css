@@ -1,5 +1,5 @@
 .photos {
-    height: 200px;
+    height: 300px;
 }
 
 .creditContainer {
@@ -19,11 +19,19 @@
 
 .slick-prev:before,
 .slick-next:before {
-color: darkgray;
+color: black;
 
 }
 cite, 
 a {
 font-style: normal;
 color: lightgray;
+}
+
+#carouselContainer {
+    margin-bottom: 90px;
+}
+
+#carouselTittle {
+    margin-left: 50px;
 }
