@@ -75,11 +75,11 @@ console.log(cityInput);
                 // Append our result into our page
                 var businessesDiv = $('<div class="attractions">');
                 businessesDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
-                businessesDiv.append('<img id="attractionImage" src="' + image + '" style="width:100%;height:auto;"><br>');
+                businessesDiv.append('<img id="attractionImage" src="' + image + '" style="width:100%;height:100px;"><br>');
                 businessesDiv.append('<b id="name">' + name + '</b><br>');
                 businessesDiv.append('<b>Rating: </b>' + rating + '<br>');
                 businessesDiv.append('<b>Address: </b>' + address + '<br>');
-                businessesDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
+                businessesDiv.append('<button id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
                 $('#topAttractions').prepend(businessesDiv);
               });
             }
@@ -123,8 +123,7 @@ success: function(data){
       eventsDiv.append('<b>Attending: </b>' + attending + '<br>');
       eventsDiv.append('<b>Address: </b>' + address + '<br>');
       eventsDiv.append('<b>Date: </b>' + timeStart + '<br>')
-      eventsDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
-      
+      eventsDiv.append('<button id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
       $("#topEvents").prepend(eventsDiv);
     });
   }
@@ -132,7 +131,7 @@ success: function(data){
 
 ///////Natasha's overview API call/////
 
-   var myurl = "https://secure.geonames.org/wikipediaSearchJSON?q=" + cityInput + "&minRows=20&username=natka";
+   var myurl = "https://api.geonames.org/wikipediaSearchJSON?q=" + cityInput + "&minRows=20&username=natka";
    $.ajax({
       url: myurl,
       method: 'GET',
@@ -142,7 +141,7 @@ success: function(data){
       var overview = response.geonames[0].summary;
       console.log(overview);
       var link = response.geonames[0].wikipediaUrl;
-      $("#cityOverview").append(overview + '<button class="btn btn-secondary" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
+      $("#cityOverview").append(overview + '<button id="details"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
   })
   
       
