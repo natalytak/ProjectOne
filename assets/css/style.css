@@ -2,6 +2,11 @@
     transition: transparency 2s;
 }
 
+/* header element css */
+h3 {
+    color: #8c734b;
+}
+
 /* nav bar */
 .navbar-custom {
     height: 55px;
@@ -467,7 +472,11 @@ li.nav-item{
     cursor: pointer;
 }
 
+/* weatherchart-specific css */
 
+.weather-container {
+    margin: 0 auto;
+}
 
 
 /* mobile responsive */

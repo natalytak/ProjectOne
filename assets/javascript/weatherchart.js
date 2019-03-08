@@ -1,7 +1,8 @@
 var cityInput = localStorage.getItem("city");
+
 // setting api query variable
 var queryURL =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Chicago&units=imperial&APIKEY=d3100d1c4df5ca0bc479a80c96bf0ccf";
+  "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&units=imperial&APIKEY=d3100d1c4df5ca0bc479a80c96bf0ccf";
 
 console.log(queryURL);
 
