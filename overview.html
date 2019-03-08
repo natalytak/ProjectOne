@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
 
-  <body>
+  <body background="assets/images/body_background.jpg">
     <!-- box structure includes a main container (mainContainer class), a menu (topNavMenu class), and a content container (mainContentContainer) for overview, top events, and pictures content -->
     <div class="mainContainer">
       <header>
@@ -46,25 +46,25 @@
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                   <a class="overview-nav-link" href="overview.html"
-                    >About this City<span class="sr-only">(current)</span></a
+                    >About<span class="sr-only">(current)</span></a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="overview-nav-link" href="news.html">Local News</a>
+                  <a class="overview-nav-link" href="news.html">News</a>
                 </li>
                 <li class="nav-item">
-                  <a class="overview-nav-link" href="events.html">Local Events</a>
+                  <a class="overview-nav-link" href="events.html">Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="overview-nav-link" href="topcities.html">Saved Cities</a>
                   </li>
-              </ul>
-              <!-- <span id="fireBase">Firebase Placeholder</span> -->
+                </ul>
               <span id="currentCityID"></span>
-              <span class="navbar-text">
-                &nbsp; | &nbsp;
-              </span>
+              <span id="save-button" class="overview-nav-link">Save</span>
               <span id="currentWeather"></span>
+              <span class="overview-nav-link">
+     <a href="weatherforecast.html">24 HR Forecast</a>
+              </span>
             </div>
           </nav>
         </div>
@@ -76,29 +76,19 @@
           <br>
           <div class="row">
             <div class="col-lg-8">
-              <div class="card">
-                <div class="card-header">
-                  <h5>City Overview</h5>
-                </div>
-                <div class="card-body">
+                <h3>City Overview & History</h3>
                   <div id="cityOverview">
                     <div id="imageUrl">
-
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
             <div class="col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h5>Attractions</h5>
-                </div>
-                <div class="card-body">
+
+                  <h3>Top Attractions</h3>
                   <div id="topAttractions">
                     
                   </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -107,24 +97,17 @@
 
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  Location Photos
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Title</h5>
+                  <h3>Location Photos</h3>
                   <div id="#photoCarousel">
                     this div (#photoCarousel) contains the photos
                   </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-      <!-- <footer>
+<!-- 
+      <footer>
     <div class="page-footer footer-copyright text-center">© 2019 Copyright:
         <a href="">CitySeer Group</a>
         <a href="tbd" target="_Blank">
