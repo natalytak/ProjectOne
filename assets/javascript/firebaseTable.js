@@ -37,7 +37,7 @@ var config = {
         database.ref().push(newCity);
         console.log(newCity.name);
    
-    // alert("City successfully added");
+    alert("City successfully added");
 
     });
 
