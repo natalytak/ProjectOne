@@ -325,9 +325,10 @@
 /* footer */
 footer{
     height: 35px;
-    margin-top: -35px;
+    margin-top: -35px; 
     background-color: rgb(38,69,110);
     border-top: 4px solid #8c734b;
+    width: 100%;
 }
 
 .footer-copyright{
@@ -449,6 +450,10 @@ li.nav-item{
     -moz-border-radius: 500px;
 }
 
+#eventImage{
+    width: 100%;
+    height: auto;
+}
 
 /* mobile responsive */
 @media screen and (max-width: 1600px) {
