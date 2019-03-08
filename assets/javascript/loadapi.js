@@ -1,4 +1,4 @@
-// call the 'city' atteibute from LocalStorage and create the cityInput attribute
+// call the 'city' attribute from LocalStorage and create the cityInput attribute
 var cityInput = localStorage.getItem('city');
 
 console.log(cityInput);
