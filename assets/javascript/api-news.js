@@ -35,7 +35,7 @@ function buildQueryURL() {
 
     $(document).ready(function(){
       $(".card-header").hover(function(){
-        $(this).css("background-color", "rgb(255,234,203)");
+        $(this).css("background-color", "rgb(255,216,65)");
         }, function(){
         $(this).css("background-color", "transparent");
       });
@@ -59,7 +59,7 @@ function buildQueryURL() {
 
  
     // Main div container
-    var $articleListItem = $("<div style='color:white; background-color:rgba(38,69,110); padding:35px;  width:375px; height:625px; margin:0 auto;'></div>");
+    var $articleListItem = $("<div style='color:white; background-color:rgba(38,69,110); padding:35px; width:375px; height:625px; margin:0 auto;'></div>");
 
 
   
@@ -68,18 +68,18 @@ function buildQueryURL() {
     // Image
     var multimedia = ("http://nyt.com/" + article.multimedia[i].url);
     console.log(multimedia);
-    var image = $("<img>");
-    image.attr('height', 225);
-    image.attr("src", multimedia);
-    console.log(image);
+    var image2 = $("<img>");
+    image2.attr('height', 205);
+    image2.attr("src", multimedia);
+    console.log(image2);
 
 
     if (multimedia) {
-      $articleListItem.append(image);
+      $articleListItem.append(image2);
     }
 
     if (multimedia) {
-      $articleListItem.append("<br><br><br><br><br><br><br>");
+      $articleListItem.append("<br>");
     }
 
    // Headline
@@ -88,8 +88,8 @@ function buildQueryURL() {
     if (headline && headline.main) {
       console.log(headline.main);
       //headline.wrap('<a href=' + multimedia + '/>');
-      $articleListItem.append( "<br><br>" +
-        "<h5 style='padding-top:15px;' 'padding-bottom:5px;' >" +
+      $articleListItem.append(
+        "<h5 style='padding-top:5px;' 'padding-bottom:5px;' >" +
         headline.main +
         "</h5>" 
       );

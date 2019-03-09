@@ -78,7 +78,7 @@ $("#cityInput2").append("News API Articles |" + " " + cityInput);
 
      var image = $("<img>");
        //image.attr('height', 300);
-       image.attr('width', 440);
+       image.attr('width', 300);
        image.attr("src", multimedia);
 
 
@@ -93,7 +93,7 @@ $("#cityInput2").append("News API Articles |" + " " + cityInput);
      console.log(headline);
 
      if (multimedia) {
-        $articleListItem.append("<br><br><br><br><br><br><br>");
+        $articleListItem.append("<br>");
       }
   
 
@@ -103,7 +103,7 @@ $("#cityInput2").append("News API Articles |" + " " + cityInput);
      if (headline) {
        console.log(headline);
        $articleListItem.append(
-         "<h5> " +"<div style='padding-top:8px;' 'padding-bottom:9px;'>"  + 
+         "<h5> " +"<div style='padding-top:5px;' 'padding-bottom:9px;'>"  + 
          headline +
          "</h5>" + 
          "</div>"
