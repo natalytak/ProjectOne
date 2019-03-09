@@ -29,6 +29,21 @@ $.ajax({
   $("#currentWeather").prepend(currentTemp);
 });
 
+///////Natasha's city image API call/////
+
+var pixabayUrl = "https://pixabay.com/api/?key=11801190-0ca7f6e1ad42b7ceca325ed29&q=" + cityInput + "&image_type=photo";
+   $.ajax({
+      url: pixabayUrl,
+      method: 'GET',
+      dataType: 'json',
+   }).then(function(response){
+      console.log(response);
+      var mainImage = response.hits[0].largeImageURL;
+      console.log(mainImage);
+      $("#imageUrl").append('<img id="overviewImg" src=" ' + mainImage + '" style="width:100%;height:auto"><br>');
+  
+    })
+
 ////////Natasha's attractions API call///
 
 console.log(cityInput);
@@ -56,6 +71,7 @@ console.log(cityInput);
                 var image = item.image_url;
                 var rating = item.rating;
                 var address = item.location.display_address;
+                
                 var businessesURL = item.url;
                 // Append our result into our page
                 var businessesDiv = $('<div class="attractions">');
@@ -63,16 +79,13 @@ console.log(cityInput);
                 var attractionDiv = $('<img class="attractionImage" id="' + id + '" src="' + image + '"style="width:100%;height:auto"><br>');
                 // to put as back-up image in case the one from Yelp API does not load
                 $(".attractionImage").on("error", function() {
-                console.log("image not loaded");
-                $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg");
-                console.log("changed attr");
+                $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg").attr("style", "width:100%;height:auto");
                 });
-
                 businessesDiv.append(attractionDiv);
                 businessesDiv.append('<b id="name">' + name + '</b><br>');
                 businessesDiv.append('<b>Rating: </b>' + rating + '<br>');
                 businessesDiv.append('<b>Address: </b>' + address + '<br>');
-                businessesDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
+                businessesDiv.append('<button class="btn btn-warning" id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
                 $('#topAttractions').prepend(businessesDiv);
               });
             }
@@ -108,14 +121,11 @@ success: function(data){
       var eventURL = item.event_site_url;
       // Append our result into our page
       var eventsDiv = $('<div class="events">');
-      
       eventsDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
       var imageDiv = $('<img class="eventImage" id="' + id + '" src="' + image + '"style="width:100%;height:250px;float:left; object-fit:contain"><br>');
       // to put as back-up image in case the one from Yelp API does not load
       $(".eventImage").on("error", function() {
-        console.log("image not loaded");
-        $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg");
-        console.log("changed attr");
+        $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg").attr("style", "width:100%;height:250px;float:left; object-fit:contain");
       });
 
       eventsDiv.append(imageDiv);
@@ -124,12 +134,12 @@ success: function(data){
       eventsDiv.append('<b>Attending: </b>' + attending + '<br>');
       eventsDiv.append('<b>Address: </b>' + address + '<br>');
       eventsDiv.append('<b>Date: </b>' + timeStart + '<br>')
-      eventsDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
+      eventsDiv.append('<button class="btn btn-warning" id="details"><a target="_blank" href="' + eventURL + '">Details</a></button><br>');
+      
       $("#topEvents").prepend(eventsDiv);
-    
     });
   }
-});     
+});      
 
 ///////Natasha's overview API call/////
 
@@ -143,7 +153,5 @@ success: function(data){
       var overview = response.geonames[0].summary;
       console.log(overview);
       var link = response.geonames[0].wikipediaUrl;
-      $("#cityOverview").append(overview + '<button class="btn btn-secondary" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
+      $("#cityOverview").append(overview + '<button class="btn btn-warning" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
   })
-  
-      
