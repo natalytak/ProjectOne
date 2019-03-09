@@ -227,7 +227,7 @@ h3 {
 .the-team-style-group-three-waypoint{
     opacity: 1;
     transition: 2s all;
-    transition-delay: 2s;
+    transition-delay: 1.5s;
 }
 
 
@@ -471,6 +471,20 @@ li.nav-item{
 .cityclicked {
     cursor: pointer;
 }
+
+/* Current Weather */
+.hourly-forecast{
+    color:white;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.hourly-forecast:hover{
+    color:white;
+    text-transform: none;
+    text-decoration: underline;
+}
+
 
 /* weatherchart-specific css */
 
