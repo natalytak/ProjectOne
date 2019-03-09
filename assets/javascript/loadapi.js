@@ -48,7 +48,7 @@ var pixabayUrl = "https://pixabay.com/api/?key=11801190-0ca7f6e1ad42b7ceca325ed2
 
 console.log(cityInput);
 
-    var attractionsUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=tourist-attractions&location=" + cityInput + "&sort_by=rating&limit=5";
+    var attractionsUrl = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=tourist-attractions&location=" + cityInput + "&sort_by=rating&limit=3";
          
     callYelp(attractionsUrl);
 
@@ -71,11 +71,17 @@ console.log(cityInput);
                 var image = item.image_url;
                 var rating = item.rating;
                 var address = item.location.display_address;
+                
                 var businessesURL = item.url;
                 // Append our result into our page
                 var businessesDiv = $('<div class="attractions">');
                 businessesDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
-                businessesDiv.append('<img id="attractionImage" src="' + image + '" style="width:100%;height:auto;"><br>');
+                var attractionDiv = $('<img class="attractionImage" id="' + id + '" src="' + image + '"style="width:100%;height:auto"><br>');
+                // to put as back-up image in case the one from Yelp API does not load
+                $(".attractionImage").on("error", function() {
+                $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg").attr("style", "width:100%;height:auto");
+                });
+                businessesDiv.append(attractionDiv);
                 businessesDiv.append('<b id="name">' + name + '</b><br>');
                 businessesDiv.append('<b>Rating: </b>' + rating + '<br>');
                 businessesDiv.append('<b>Address: </b>' + address + '<br>');
@@ -115,9 +121,14 @@ success: function(data){
       var eventURL = item.event_site_url;
       // Append our result into our page
       var eventsDiv = $('<div class="events">');
-      
       eventsDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
-      eventsDiv.append('<img id="#eventImage" src="' + image + '" style="width:100%;height:250px;float:left; object-fit:contain"><br>');
+      var imageDiv = $('<img class="eventImage" id="' + id + '" src="' + image + '"style="width:100%;height:250px;float:left; object-fit:contain"><br>');
+      // to put as back-up image in case the one from Yelp API does not load
+      $(".eventImage").on("error", function() {
+        $(this).unbind("error").attr("src", "https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324__480.jpg").attr("style", "width:100%;height:250px;float:left; object-fit:contain");
+      });
+
+      eventsDiv.append(imageDiv);
       eventsDiv.append('<b id="name">' + name + '</b><br>');
       eventsDiv.append(description + '<br>');
       eventsDiv.append('<b>Attending: </b>' + attending + '<br>');
@@ -144,5 +155,3 @@ success: function(data){
       var link = response.geonames[0].wikipediaUrl;
       $("#cityOverview").append(overview + '<button class="btn btn-warning" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
   })
-  
-      
