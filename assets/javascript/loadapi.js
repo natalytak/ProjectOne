@@ -110,7 +110,7 @@ success: function(data){
       var eventsDiv = $('<div class="events">');
       
       eventsDiv.append('<div id="' + id + '" style="margin-top:5px;margin-bottom:5px;">');
-      var imageDiv = $('<img class="eventImage" id="' + id + '" src="' + image + '"style="width:100%;height:250px;float:left"><br>');
+      var imageDiv = $('<img class="eventImage" id="' + id + '" src="' + image + '"style="width:100%;height:250px;float:left; object-fit:contain"><br>');
       // to put as back-up image in case the one from Yelp API does not load
       $(".eventImage").on("error", function() {
         console.log("image not loaded");
