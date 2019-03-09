@@ -79,7 +79,7 @@ console.log(cityInput);
                 businessesDiv.append('<b id="name">' + name + '</b><br>');
                 businessesDiv.append('<b>Rating: </b>' + rating + '<br>');
                 businessesDiv.append('<b>Address: </b>' + address + '<br>');
-                businessesDiv.append('<button class="btn btn-secondary" id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
+                businessesDiv.append('<button class="btn btn-warning" id="details"><a target="_blank" href="' + businessesURL + '">Details</a></button><br>');    
                 $('#topAttractions').prepend(businessesDiv);
               });
             }
@@ -142,7 +142,7 @@ success: function(data){
       var overview = response.geonames[0].summary;
       console.log(overview);
       var link = response.geonames[0].wikipediaUrl;
-      $("#cityOverview").append(overview + '<button class="btn btn-secondary" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
+      $("#cityOverview").append(overview + '<button class="btn btn-warning" id="details" style="background-color:#8c734b,padding:8px40px,margin:10px"><a target="_blank" href="https://' + link + '">Read More</a></button><br>');
   })
   
       
