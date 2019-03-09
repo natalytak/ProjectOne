@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/CitySeer_house_w_title.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/CitySeer_house_w_title.png">
 
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
@@ -54,43 +54,57 @@
             <span id="save-button" class="overview-nav-link">Save</span>
             <span id="currentWeather"></span>
             <span class="overview-nav-link">
-              <a class="hourly-forecast" href="weatherforecast.html">24 HR Forecast</a>
+              <a href="weatherforecast.html">24 HR Forecast</a>
             </span>
           </div>
         </nav>
       </div>
     </header>
 
-    <div class="mainContentContainer">
-      <div class="container">
+    <br>
+    <div class="row">
+  
+      <!-- Bootstrap Grid Divided 2: 7: 3 -->
+      <div class="col-2"></div>
+  
+      
 
-        <div class="row">
+        <!--Articles will show here-->
+        <br>
+        
+        <div class="col-8"><h1 id ="cityInput1" style="text-transform: uppercase; padding-top:30px; padding-bottom:30px; color:rgba(52,58,64); text-align: center;" ></h1>
+          <hr style="border: none; border-bottom: 1px solid gray; width:80%">
+            <div class="row" style=padding-left:30px id="display-articles"></div>
+            
+            
+            <br>
+        
 
-          <!-- Bootstrap Grid Divided 2: 7: 3 -->
-
-          <div class="col-12">
-
-            <h3>Local News</h3>
-            <a href="" id=divLink></a>
-            <div class="row" style=padding-left:30px id="display-articles"></a></div>
-
-          </div>
-
-        </div>
+        <h1 id ="cityInput2" style="text-transform: uppercase; padding-top:30px; padding-bottom:30px; color:rgba(52,58,64); text-align: center;" ></h1>
+        <hr style="border: none; border-bottom: 1px solid gray; width:80%">
+        <div class="row" style=padding-left:30px id="display-news"></div>
       </div>
+
+
+        <div class="col-2"></div>
     </div>
+    <br>
+    <br>
+    <br>
+    </div>
+      
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="assets/javascript/api-news.js"></script>
-  <script src="assets/javascript/loadapi.js"></script>
-</body>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <script src="assets/javascript/api-news.js"></script>
+      <script src="assets/javascript/api-news2.js"></script>
+      <script src="assets/javascript/loadapi.js"></script>
+      <script type="text/javascript" src="assets/javascript/firebaseTable.js"></script>
 </body>
 
 </html>
