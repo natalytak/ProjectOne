@@ -20,27 +20,27 @@ $(document).ready(function(){
     var $aboutUsStyle = $(".about-us-fade")
     $aboutUsStyle.waypoint(function() {
     $aboutUsStyle.addClass("about-us-fade-waypoint");
-    }, { offset: "70%"});
+    }, { offset: "65%"});
 
     var $theTeamStyle = $(".the-team-title-style")
     $theTeamStyle.waypoint(function() {
     $theTeamStyle.addClass("the-team-title-style-waypoint");
-    }, { offset: "70%"});
+    }, { offset: "65%"});
 
     var $theTeamStyleGroupOne = $(".the-team-style-group-one")
     $theTeamStyleGroupOne.waypoint(function() {
     $theTeamStyleGroupOne.addClass("the-team-style-group-one-waypoint");
-    }, { offset: "70%"});
+    }, { offset: "65%"});
 
     var $theTeamStyleGroupTwo = $(".the-team-style-group-two")
     $theTeamStyleGroupTwo.waypoint(function() {
     $theTeamStyleGroupTwo.addClass("the-team-style-group-two-waypoint");
-    }, { offset: "70%"});
+    }, { offset: "65%"});
 
     var $theTeamStyleGroupThree = $(".the-team-style-group-three")
     $theTeamStyleGroupThree.waypoint(function() {
     $theTeamStyleGroupThree.addClass("the-team-style-group-three-waypoint");
-    }, { offset: "70%"});
+    }, { offset: "65%"});
     
     // end transition
 
