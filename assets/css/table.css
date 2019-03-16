@@ -13,12 +13,17 @@
   }
 
   .cityclicked:hover{
-      zoom: 1.2;
+      zoom: 1.1;
+      color: #8c734b;
   }
 
   td {
     font-size: 20px;
     }
+
+  th {
+      font-size: 25px;
+  }
 
   .removeBtn {
         color: white;
