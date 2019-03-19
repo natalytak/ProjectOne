@@ -31,11 +31,11 @@ function buildQueryURL() {
   var article = NYTData.response.docs[i];
 
 
-    var $articleList = $("<div class='card-header' style ='margin:0 auto;'>");
+    var $articleList = $("<div class='card-header' style ='margin:0 auto; background-color:rgba(0,0,0,0.0 '>");
 
     $(document).ready(function(){
       $(".card-header").hover(function(){
-        $(this).css("background-color", "rgb(255,216,65)");
+        $(this).css("background-color", "rgba(255,216,65)");
         }, function(){
         $(this).css("background-color", "transparent");
       });
@@ -59,7 +59,7 @@ function buildQueryURL() {
 
  
     // Main div container
-    var $articleListItem = $("<div style='color:white; background-color:rgba(38,69,110); padding:35px; width:375px; height:625px; margin:0 auto;'></div>");
+    var $articleListItem = $("<div class=news-container style='color:white; background-color:rgba(38,69,110); padding:35px; height:625px; margin:0 auto;'></div>");
 
 
   
@@ -68,7 +68,7 @@ function buildQueryURL() {
     // Image
     var multimedia = ("http://nyt.com/" + article.multimedia[i].url);
     console.log(multimedia);
-    var image2 = $("<img>");
+    var image2 = $("<img class= news-container-img>");
     image2.attr('height', 205);
     image2.attr("src", multimedia);
     console.log(image2);

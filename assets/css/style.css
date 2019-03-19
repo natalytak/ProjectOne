@@ -197,7 +197,7 @@ h3 {
 
 .the-team-title-style-waypoint{
     opacity: 1;
-    transition: 2s all;
+    transition: 1.5s all;
 }
 
 .the-team-style-group-one{
@@ -206,7 +206,7 @@ h3 {
 
 .the-team-style-group-one-waypoint{
     opacity: 1;
-    transition: 2s all;
+    transition: 1.5s all;
     transition-delay: 1s;
 }
 
@@ -216,7 +216,7 @@ h3 {
 
 .the-team-style-group-two-waypoint{
     opacity: 1;
-    transition: 2s all;
+    transition: 1.5s all;
     transition-delay: 1.5s;
 }
 
@@ -226,8 +226,8 @@ h3 {
 
 .the-team-style-group-three-waypoint{
     opacity: 1;
-    transition: 2s all;
-    transition-delay: 1.5s;
+    transition: 1.5s all;
+    transition-delay: 2s;
 }
 
 
@@ -437,6 +437,7 @@ li.nav-item{
 
 
 
+
 /* Events CSS */
 
 .news-nav-link{
@@ -491,6 +492,21 @@ li.nav-item{
 .weather-container {
     margin: 0 auto;
 }
+
+
+/* News CSS */
+.news-container{
+    width:375px;
+}
+
+.news-container-img {
+    display:block;
+    margin: auto;
+}
+
+
+
+
 
 
 /* mobile responsive */
@@ -670,6 +686,15 @@ li.nav-item{
     .input-style{
         width: 375px;
     }
+
+    .news-container{
+        width: 275px;
+    }
+
+    .news-container-img{
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -752,5 +777,9 @@ li.nav-item{
   #name {
     font-size: 1.3em;
     color: rgb(41, 80, 131); 
+  }
+
+  .events-card {
+      background-color: rgba(0, 0, 0, .0)      
   }
   
