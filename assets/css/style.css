@@ -381,6 +381,18 @@ footer{
 
 
 
+ /* fixed nav bar */
+.topNavMenu{
+    position: fixed;
+    z-index: 99;
+}
+
+.content-container-buffer{
+    padding-top: 75px;
+}
+
+
+
 /* Vlad's CSS / Weather & Overview*/
 li.nav-item{
     text-align: center;
