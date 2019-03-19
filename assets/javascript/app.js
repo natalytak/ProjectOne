@@ -4,18 +4,18 @@ $(document).ready(function(){
   var $overviewImage = $(".overview-image");
     $overviewImage.waypoint(function() {
     $overviewImage.addClass("overview-image-waypoint");
-    }, { offset: "50%"});
+    }, { offset: "75%"});
 
 
     var $attractionsImage = $(".attractions-image");
     $attractionsImage.waypoint(function() {
     $attractionsImage.addClass("attractions-image-waypoint");
-    }, { offset: "50%"});
+    }, { offset: "75%"});
 
     var $newsImage = $(".news-image");
     $newsImage.waypoint(function() {
     $newsImage.addClass("news-image-waypoint");
-    }, { offset: "50%"});
+    }, { offset: "75%"});
 
     var $aboutUsStyle = $(".about-us-fade")
     $aboutUsStyle.waypoint(function() {
@@ -30,17 +30,17 @@ $(document).ready(function(){
     var $theTeamStyleGroupOne = $(".the-team-style-group-one")
     $theTeamStyleGroupOne.waypoint(function() {
     $theTeamStyleGroupOne.addClass("the-team-style-group-one-waypoint");
-    }, { offset: "65%"});
+    }, { offset: "75%"});
 
     var $theTeamStyleGroupTwo = $(".the-team-style-group-two")
     $theTeamStyleGroupTwo.waypoint(function() {
     $theTeamStyleGroupTwo.addClass("the-team-style-group-two-waypoint");
-    }, { offset: "65%"});
+    }, { offset: "85%"});
 
     var $theTeamStyleGroupThree = $(".the-team-style-group-three")
     $theTeamStyleGroupThree.waypoint(function() {
     $theTeamStyleGroupThree.addClass("the-team-style-group-three-waypoint");
-    }, { offset: "65%"});
+    }, { offset: "100%"});
     
     // end transition
 
