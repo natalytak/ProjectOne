@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  // Scrolling NavBar on Search Page
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("scrolling-navbar").style.top = "0";
+    } else {
+      document.getElementById("scrolling-navbar").style.top = "-75px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
   // transition style functions & variables
   var $overviewImage = $(".overview-image");
     $overviewImage.waypoint(function() {
@@ -95,11 +107,10 @@ $(document).ready(function(){
       event.preventDefault();
       
       var cityInput = randomCityList[Math.floor(Math.random() * randomCityList.length)];
-      
       console.log(cityInput);
       
+      // store user selected city for other pages
       localStorage.setItem("city", cityInput);
-      
       location.href = "overview.html";
       });
     
