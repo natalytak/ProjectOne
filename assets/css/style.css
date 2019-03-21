@@ -12,9 +12,15 @@ h3 {
     height: 55px;
     background: #fff;
     z-index: 99;
-    border-bottom: 3px solid rgb(38,69,110);
+    border-bottom: 3px solid rgb(38,69,110);;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top .5s;
 }
 
+/* navbar CS Logo */
 .header-logo {
     position: absolute;
     top: 0;
@@ -25,14 +31,15 @@ h3 {
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
-
 }
 
+/* links container */
 .nav-items-container{
     position: absolute;
     right: 400px;
 }
 
+/* links decoration */
 .nav-item-links {
     letter-spacing: 2px;
     padding: 0.5rem 1rem;
@@ -74,9 +81,6 @@ h3 {
     height:800px;
     border-bottom: 2px solid rgb(38,69,110);
 }
-
-
-
 
 
 

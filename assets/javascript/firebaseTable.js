@@ -211,7 +211,7 @@
         console.log(response);
 
         var temp = Math.round(response.main.temp);
-        var tempInfo = $("<p id='sumWeather'>Current temperature: "+temp+" Degrees F</p>")
+        var tempInfo = $("<p id='sumWeather'>Current Temperature: "+temp+" Degrees F</p>")
         console.log(nestWeather);
         nestWeather.append(tempInfo);
 
