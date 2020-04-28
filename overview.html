@@ -21,6 +21,7 @@
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/CitySeer_house_w_title.png">
 
     <link rel="stylesheet" type="text/css" href="assets/css/carousel.css">  <!-- for carousel -->
+    <link rel="stylesheet" type="text/css" href="assets/css/popper.css">  <!-- for popper -->
   </head>
 
   <body background="assets/images/body_background.jpg">
@@ -69,7 +70,9 @@
               <span id="currentCityID"></span>
               <span id="save-button" class="overview-nav-link" aria-describedby="tooltip">Save</span>
               <!-- Popper -->
-              <div id="tooltip" role="tooltip"></div>
+              <div class="popper-container"> 
+                <div id="popper" role="tooltip"></div>
+              </div>
               <!-- Popper -->
               <span id="currentWeather"></span>
               <span class="overview-nav-link">

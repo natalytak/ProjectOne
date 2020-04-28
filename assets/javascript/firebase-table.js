@@ -43,13 +43,13 @@ var config = {
 
         //CALL POPPER FUNCTION TO ALERT USER CITY WAS SAVED
         popper()
-        
+
         // Pooper**********************
         function popper() {
           const saveBtn = document.querySelector('#save-button');
-          const tooltip = document.querySelector('#tooltip');
+          const tooltip = document.querySelector('#popper');
           tooltip.classList.add("popper")
-          tooltip.innerHTML = "Successfully added"
+          tooltip.innerHTML = "SUCCESSFULLY ADDED"
 
           // Pass the button, the tooltip and options to position popper
           Popper.createPopper(saveBtn, tooltip, {
@@ -66,11 +66,9 @@ var config = {
           setTimeout(function() {
             tooltip.innerHTML = " ";
             tooltip.classList.remove("popper")
-          }, 1400)
+          }, 1300)
         } 
         // Popper**********************
-
-
 
     });
 
@@ -120,7 +118,6 @@ var config = {
         //Append the td to its row
         newRow.append(td);
 
-       
         //Append the new row to the table's body
         $("#tbody").append(newRow);
      });
