@@ -67,7 +67,10 @@
                 </li>
               </ul>
               <span id="currentCityID"></span>
-              <span id="save-button" class="overview-nav-link">Save</span>
+              <span id="save-button" class="overview-nav-link" aria-describedby="tooltip">Save</span>
+              <!-- Popper -->
+              <div id="tooltip" role="tooltip"></div>
+              <!-- Popper -->
               <span id="currentWeather"></span>
               <span class="overview-nav-link">
                 <a class="hourly-forecast" href="weatherforecast.html">24 HR Forecast</a>
@@ -137,5 +140,7 @@
     <script src="assets/javascript/loadapi.js"></script>
     <script type="text/javascript" src="assets/javascript/carouselPixabayAPI.js"></script> <!-- for carousel -->
     <script src="assets/javascript/firebase-table.js"></script> <!-- for firebase table || Pixabay API || Bootstrap Carousel || Weather -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> <!-- Popper CDN development version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script> <!-- Popper CDN production version -->
   </body>
 </html>
