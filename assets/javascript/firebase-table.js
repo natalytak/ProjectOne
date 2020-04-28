@@ -39,8 +39,38 @@ var config = {
         console.log(cities);
         console.log(newCity.name);
         
-        //Change***
-        alert("City successfully added");
+        // alert("City successfully added");
+
+        //CALL POPPER FUNCTION TO ALERT USER CITY WAS SAVED
+        popper()
+        
+        // Pooper**********************
+        function popper() {
+          const saveBtn = document.querySelector('#save-button');
+          const tooltip = document.querySelector('#tooltip');
+          tooltip.classList.add("popper")
+          tooltip.innerHTML = "Successfully added"
+
+          // Pass the button, the tooltip and options to position popper
+          Popper.createPopper(saveBtn, tooltip, {
+            placement: 'bottom',
+            modifiers: [
+              {
+                name: 'offset',
+                options: {
+                  offset: [10, 20],
+                },
+              },
+            ],
+          }) 
+          setTimeout(function() {
+            tooltip.innerHTML = " ";
+            tooltip.classList.remove("popper")
+          }, 1400)
+        } 
+        // Popper**********************
+
+
 
     });
 
