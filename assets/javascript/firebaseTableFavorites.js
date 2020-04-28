@@ -212,7 +212,7 @@ var config = {
         console.log(response);
 
         var temp = Math.round(response.main.temp);
-        var tempInfo = $("<p id='sumWeather'>Current Temperature: "+temp+" Degrees F</p>")
+        var tempInfo = $("<p class='sumWeather'>Current Temp: "+temp+" \xB0F</p>")
         console.log(nestWeather);
         nestWeather.append(tempInfo);
 
