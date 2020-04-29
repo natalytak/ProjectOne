@@ -10,8 +10,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous" />
+  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script> <!--for firebase-->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/images/CitySeer_house_w_title.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/popper.css">  <!-- for popper -->
 </head>
 
 <body background="assets/images/body_background.jpg">
@@ -44,7 +46,12 @@
               </li>
             </ul>
             <span id="currentCityID"></span>
-            <span id="save-button" class="overview-nav-link">Save</span>
+            <span id="save-button" class="overview-nav-link save-button" aria-describedby="tooltip">Save</span>
+              <!-- Popper -->
+              <div class="popper-container"> 
+                <div id="popper" role="tooltip"></div>
+              </div>
+              <!-- Popper -->
             <span id="currentWeather"></span>
             <span class="overview-nav-link">
               <a class="hourly-forecast" href="weatherforecast.html">24 HR Forecast</a>
@@ -75,6 +82,8 @@
     <script src="assets/javascript/loadapi.js"></script>
     <script src="assets/javascript/weatherchart.js"></script>
     <script src="assets/javascript/firebase-table.js"></script> <!-- for firebase table || Pixabay API || Bootstrap Carousel || Weather -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> <!-- Popper CDN development version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script> <!-- Popper CDN production version -->
 </body>
 
 </html>

@@ -7,72 +7,71 @@ var config = {
     storageBucket: "project1-city-seer.appspot.com",
     messagingSenderId: "651225284485"
   };
-  firebase.initializeApp(config);
+firebase.initializeApp(config);
 
-  var database = firebase.database();
-  var city;
-  var remove;
-  var key;
-  var cityclicked;
-  var cityclickedId;
-  var cityInput;
-  var cityName;
-  var citySaved;
-  var divSum;
-  var cities = [];
+var database = firebase.database();
+var city;
+var remove;
+var key;
+var cityclicked;
+var cityclickedId;
+var cityInput;
+var cityName;
+var citySaved;
+var divSum;
+var cities = [];
+
+//Making city search input avaialble in case user wants to save it
+var cityInput = localStorage.getItem('city');
+cityName = cityInput.toLowerCase();
   
-  //Making city search input avaialble in case user wants to save it
-  var cityInput = localStorage.getItem('city');
-  cityName = cityInput.toLowerCase();
-  
-  //SAVE THE CITY and place it in firebase and in a table row with elements to later remove or show more info
-  $("#save-button").on("click", function(event) {
-        console.log('CLICKED SUBMIT')
-        event.preventDefault();
+//SAVE THE CITY and place it in firebase and in a table row with elements to later remove or show more info
+$(".save-button").on("click", function(event) {
+  console.log('CLICKED SUBMIT')
+  event.preventDefault();
 
-        var newCity = {
-            name: cityName
-        };
-        console.log(cityName)
+  var newCity = {
+    name: cityName
+  };
 
-        database.ref().push(newCity);
-        console.log(cities);
-        console.log(newCity.name);
+  console.log(cityName)
+
+  database.ref().push(newCity);
+  console.log(cities);
+  console.log(newCity.name);
         
-        // alert("City successfully added");
+// alert("City successfully added");
 
-        //CALL POPPER FUNCTION TO ALERT USER CITY WAS SAVED
-        popper()
-        
-        // Pooper**********************
-        function popper() {
-          const saveBtn = document.querySelector('#save-button');
-          const tooltip = document.querySelector('#tooltip');
-          tooltip.classList.add("popper")
-          tooltip.innerHTML = "Successfully added"
+  //CALL POPPER FUNCTION TO ALERT USER CITY WAS SAVED
+  popper()
 
-          // Pass the button, the tooltip and options to position popper
-          Popper.createPopper(saveBtn, tooltip, {
-            placement: 'bottom',
-            modifiers: [
-              {
-                name: 'offset',
-                options: {
-                  offset: [10, 20],
-                },
-              },
-            ],
-          }) 
-          setTimeout(function() {
-            tooltip.innerHTML = " ";
-            tooltip.classList.remove("popper")
-          }, 1400)
-        } 
-        // Popper**********************
+  //FUNCTION FOR POPPER
+  function popper() {
+    const saveBtn = document.querySelector('.save-button');
+    const tooltip = document.querySelector('#popper');
+    tooltip.classList.add("popper")
+    tooltip.innerHTML = "SUCCESSFULLY ADDED"
 
+    // Pass the button, the tooltip and options to position popper
+    Popper.createPopper(saveBtn, tooltip, {
+      placement: 'bottom',
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [10, 20],
+          },
+        },
+      ],
+    }) 
+    setTimeout(function() {
+      tooltip.innerHTML = " ";
+      tooltip.classList.remove("popper")
+    }, 1300)
+  } 
+  //END FUNCTION POPPER
 
-
-    });
+});
 
         database.ref().on("child_added", function(childSnapshot) {
         console.log(childSnapshot.val());
@@ -120,7 +119,6 @@ var config = {
         //Append the td to its row
         newRow.append(td);
 
-       
         //Append the new row to the table's body
         $("#tbody").append(newRow);
      });
