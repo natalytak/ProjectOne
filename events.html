@@ -14,9 +14,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script> <!--for firebase-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/CitySeer_house_w_title.png">
-
+    <link rel="stylesheet" type="text/css" href="assets/css/popper.css">  <!-- for popper -->
   </head>
 
 <body background="assets/images/body_background.jpg">
@@ -63,7 +64,12 @@
                 </li>
               </ul>
               <span id="currentCityID"></span>
-              <span id="save-button" class="overview-nav-link">Save</span>
+              <span id="save-button" class="overview-nav-link save-button" aria-describedby="tooltip">Save</span>
+              <!-- Popper -->
+              <div class="popper-container"> 
+                <div id="popper" role="tooltip"></div>
+              </div>
+              <!-- Popper -->
               <span id="currentWeather"></span>
               <span class="overview-nav-link">
                 <a class="hourly-forecast" href="weatherforecast.html">24 HR Forecast</a>
@@ -93,12 +99,15 @@
      </footer> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script> <!-- for carousel -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> <!-- for carousel -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -106,5 +115,7 @@
     ></script>
     <script src="assets/javascript/loadapi.js"></script>
     <script src="assets/javascript/firebase-table.js"></script> <!-- for firebase table || Pixabay API || Bootstrap Carousel || Weather -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> <!-- Popper CDN development version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script> <!-- Popper CDN production version -->
   </body>
 </html>
