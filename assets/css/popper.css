@@ -1,13 +1,13 @@
 .popper {
-    display: inline-block;
-    background-color: #8c734b;
-    color: rgb(38,69,110);
-    font-weight: bold;
-    padding: 1.5% 8px;
-    font-size: 16px;
-    border-radius: 1px;
-    line-height: 0%;
-  }
+  display: inline-block;
+  background-color: white;
+  color: rgb(38,69,110);
+  border: 3px solid rgb(38,69,110);
+  padding: 1.5% 8px;
+  font-size: 16px;
+  border-radius: 1px;
+  line-height: 0%;
+}
   
 
   
